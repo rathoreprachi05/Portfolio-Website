@@ -5,18 +5,18 @@ import { motion } from 'framer-motion';
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1, 
-    transition: { staggerChildren: 0.15 } 
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
   }
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: "spring", stiffness: 100 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100 }
   }
 };
 
@@ -24,31 +24,31 @@ export const AboutBento = () => {
   return (
     <section id="about" className="py-24 bg-[#FAF8F5]">
       <div className="max-w-7xl mx-auto px-8">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 [perspective:1000px]"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          
+
           {/* Card 1: Intro */}
           <motion.div variants={itemVariants} className="md:col-span-2 lg:col-span-3">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="bg-[#FAF8F5] rounded-3xl p-8 shadow-lg border border-stone-200 h-full"
             >
               <h2 className="text-4xl font-bold mb-4 text-[#1E293B]">More than just code.</h2>
               <p className="text-[#334155] text-lg leading-relaxed">
-                Hi, I'm Prachi. I am a 3rd-year B.Tech Computer Science student based in New Delhi, minoring in Cyber Security with an open minor in English. I thrive at the intersection of rigid logic and creative storytelling—whether that means architecting secure backend systems, building AI-powered applications, or writing essays under the midnight lamp.
+                Hi, I'm Prachi Rathore. I am a 3rd-year B.Tech Computer Science and Engineering student based in New Delhi, minoring in Cyber Security with an open minor in English. I thrive at the intersection of rigid logic and creative storytelling—whether that means architecting secure backend systems, building AI-powered applications, or writing essays under the midnight lamp.
               </p>
             </motion.div>
           </motion.div>
 
           {/* Card 2: Stats */}
           <motion.div variants={itemVariants} className="md:col-span-1">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="bg-[#1E293B] rounded-3xl p-8 shadow-lg text-white h-full"
@@ -73,7 +73,7 @@ export const AboutBento = () => {
 
           {/* Card 3: Cyber Security */}
           <motion.div variants={itemVariants} className="md:col-span-2">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="bg-[#0F172A] rounded-3xl p-8 shadow-lg text-white flex flex-col justify-between h-full"
@@ -95,7 +95,7 @@ export const AboutBento = () => {
 
           {/* Card 4: Midnight Stories */}
           <motion.div variants={itemVariants} className="md:col-span-1">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="bg-[#E86565] rounded-3xl p-8 shadow-lg text-white flex flex-col justify-between h-full"
@@ -118,21 +118,21 @@ export const AboutBento = () => {
           <div className="md:col-span-3 lg:col-span-1 flex flex-col gap-6">
             {/* Card 5: Duolingo */}
             <motion.div variants={itemVariants} className="flex-1">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="bg-white rounded-3xl p-6 shadow-lg flex items-center gap-4 h-full"
               >
                 <span className="text-4xl shrink-0">🔥</span>
                 <p className="font-semibold text-[#1E293B] text-sm">
-                  🇫🇷 420+ Day French Streak (Duolingo). Toujours apprendre!
+                  475+ Days French Streak (Duolingo). Toujours apprendre!
                 </p>
               </motion.div>
             </motion.div>
 
             {/* Card 6: Reading */}
             <motion.div variants={itemVariants} className="flex-1">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="bg-white rounded-3xl p-6 shadow-lg flex items-center gap-4 h-full"
