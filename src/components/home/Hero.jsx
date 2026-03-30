@@ -37,7 +37,7 @@ export const Hero = () => {
       >
         {/* Left Side Nav: Dark Text over Cream */}
         <div className="flex items-center justify-center md:justify-start gap-6 md:gap-8 px-8 md:px-16 pt-10 pointer-events-auto">
-          {["About", "Projects", "CV", "Experience", "Contact"].map((item) => (
+          {["About", "Experience", "Projects", "Articles", "Contact"].map((item) => (
             <a
               key={item}
               // Dynamically assign the href: direct to PDF for CV, otherwise use a section hash
