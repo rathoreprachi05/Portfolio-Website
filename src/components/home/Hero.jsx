@@ -119,7 +119,7 @@ export const Hero = () => {
               variants={itemVariants}
               className="text-lg md:text-xl lg:text-2xl font-sans font-medium text-slate-600 mb-10"
             >
-              Software Developer | Midnight Writer
+              Aspiring Software Developer | Cyber Security Enthusiast | Midnight Writer
             </motion.h2>
 
             <motion.div variants={itemVariants}>
