@@ -125,7 +125,7 @@ export const Hero = () => {
             <motion.div variants={itemVariants}>
               <a href="#projects">
                 <button className="bg-[#E86565] text-white px-8 md:px-10 py-4 rounded-full font-bold text-lg tracking-wide hover:bg-[#d65555] focus:outline-none focus:ring-4 focus:ring-[#E86565]/30 transition-all shadow-xl hover:shadow-[0_10px_30px_-5px_rgba(232,101,101,0.6)] hover:-translate-y-1">
-                  Explore My Work
+                  Download My CV!
                 </button>
               </a>
             </motion.div>
