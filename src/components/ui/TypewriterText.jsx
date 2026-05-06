@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export const TypewriterText = ({ 
-  phrases, 
-  typingSpeed = 100, 
-  deletingSpeed = 50, 
-  pauseDuration = 3000 
+export const TypewriterText = ({
+  phrases,
+  typingSpeed = 100,
+  deletingSpeed = 50,
+  pauseDuration = 2500
 }) => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
