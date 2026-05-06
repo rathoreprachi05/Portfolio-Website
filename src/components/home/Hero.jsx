@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { TypewriterText } from "../ui/TypewriterText";
 
 export const Hero = () => {
   // Stagger variants for the text elements
@@ -37,14 +38,14 @@ export const Hero = () => {
       >
         {/* Left Side Nav: Dark Text over Cream */}
         <div className="flex items-center justify-center md:justify-start gap-6 md:gap-8 px-8 md:px-16 pt-10 pointer-events-auto">
-          {["About Me", "Projects", "Contact", "Download CV"].map((item) => (
+          {["About Me", "Projects", "Experience", "Contact", "Download CV"].map((item) => (
             <a
               key={item}
               // Dynamically assign the href: direct to PDF for CV, otherwise use a section hash
               href={item === "CV" ? "Prachi Rathore 12318960 CV.pdf" : `#${item.toLowerCase()}`}
               // Only apply the download attribute if the item is "CV"
               download={item === "CV" ? "Prachi_Rathore_CV.pdf" : undefined}
-              className="text-[#0F172A] font-bold font-sans text-sm md:text-base tracking-wide hover:text-[#E86565] transition-colors duration-300"
+              className="whitespace-nowrap text-[#0F172A] font-bold font-sans text-sm md:text-base tracking-wide hover:text-[#E86565] transition-colors duration-300"
             >
               {item}
             </a>
@@ -73,26 +74,26 @@ export const Hero = () => {
       </motion.header>
 
       {/* Left Side: The Creative (Warm Cream) */}
-      <div className="bg-[#FAF8F5] relative flex items-center justify-center p-8 md:p-16 lg:p-20 z-10 w-full h-full">
+      <div className="bg-[#FAF8F5] relative flex items-center justify-center p-6 md:p-8 lg:p-12 z-10 w-full h-full">
 
         {/* Ambient lighting for the cream side */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-orange-100/50 rounded-full blur-[100px]" />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-3xl gap-8 lg:gap-14 xl:gap-16 z-20">
+        <div className="flex flex-col items-center justify-center w-full max-w-3xl gap-4 z-20">
 
           {/* Avatar Area */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: -30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 shrink-0 drop-shadow-2xl flex items-center justify-center"
+            className="w-40 h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 drop-shadow-2xl flex items-center justify-center shrink-0"
           >
             <img
               src="/assets/Animated Me Hero Section.png"
               alt="Prachi's Avatar"
-              className="w-[120%] h-[120%] object-contain scale-110 -ml-4"
+              className="w-[120%] h-[120%] object-contain scale-180 -ml-4"
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </motion.div>
@@ -103,7 +104,7 @@ export const Hero = () => {
             initial="hidden"
             animate="visible"
             // OPTIMIZATION: Added max-w-xl and right padding (pr-8) to act as a structural boundary.
-            className="flex flex-col items-center lg:items-start text-center lg:text-left z-20 mt-4 lg:mt-0 max-w-xl px-4 lg:px-0 lg:pr-12"
+            className="flex flex-col items-center text-center z-20 w-full max-w-xl px-4 lg:px-0"
           >
             {/* Elegant Bold Serif for Main Heading */}
             <motion.h1
@@ -117,15 +118,26 @@ export const Hero = () => {
             {/* Clean Sans-Serif for Subheading */}
             <motion.h2
               variants={itemVariants}
-              className="text-lg md:text-xl lg:text-2xl font-sans font-medium text-slate-600 mb-10"
+              className="text-lg md:text-xl lg:text-2xl font-sans font-medium text-slate-600 mb-6"
             >
-              Aspiring Software Developer | Cyber Security Enthusiast | Midnight Writer
+              {" "}
+              <br className="sm:hidden" />
+              <span className="text-[#8B3A3A] font-bold">
+                <TypewriterText
+                  phrases={[
+                    "Terminal Tinkerer",
+                    "Breaking Ciphers",
+                    "Midnight Writer",
+                    "Caffeine & Code"
+                  ]}
+                />
+              </span>
             </motion.h2>
 
             <motion.div variants={itemVariants}>
               <a href="#projects">
                 <button className="bg-[#E86565] text-white px-8 md:px-10 py-4 rounded-full font-bold text-lg tracking-wide hover:bg-[#d65555] focus:outline-none focus:ring-4 focus:ring-[#E86565]/30 transition-all shadow-xl hover:shadow-[0_10px_30px_-5px_rgba(232,101,101,0.6)] hover:-translate-y-1">
-                  Download My CV!
+                  Explore My Work!
                 </button>
               </a>
             </motion.div>
